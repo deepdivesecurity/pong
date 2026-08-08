@@ -1,5 +1,6 @@
 from turtle import Screen
 from paddle import Paddle
+from scoreboard import Scoreboard
 from constants import SCREEN_HEIGHT, SCREEN_WIDTH
 
 def main(): 
@@ -11,6 +12,8 @@ def main():
 
     p1_paddle = Paddle((350, 0))
     p2_paddle = Paddle((-350, 0))
+
+    scoreboard = Scoreboard()
 
     screen.listen()
     screen.onkey(p1_paddle.up, "Up")
